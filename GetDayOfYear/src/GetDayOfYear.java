@@ -5,9 +5,43 @@ public class GetDayOfYear {
         boolean leap_year = false;
         if(year % 4 == 0){
             leap_year = true;
-
         }
         System.out.println(leap_year);
+
+        // check month validity
+        if (month<1 || month >12) {
+            System.out.println("invalid month");
+            return 1;
+        }
+        // check day validity
+        if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12 ) {
+            if (day < 1 || day > 31) {
+                System.out.println("invalid day");
+                return 1;
+            }
+        }
+        else {
+            if (day < 1 || day > 30) {
+                System.out.println("invalid day");
+                return 1;
+
+            }
+        }
+        // check day validity leap_year vs non_leap_year
+        if (month == 2) {
+            if (leap_year) {
+                if (day < 1 || day > 29) {
+                    System.out.println("invalid day");
+                    return 1;
+                }
+            } else {
+                if (day < 1 || day > 28) {
+                    System.out.println("invalid day");
+                    return 1;
+                }
+            }
+        }
+
 
         int[] months = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
@@ -40,7 +74,7 @@ public class GetDayOfYear {
 
     public static void main(String[] args) {
 
-        System.out.println(getDayOfYear(1981, 3, 3));
+        System.out.println(getDayOfYear(1983, 12, 33));
 
     }
 }
