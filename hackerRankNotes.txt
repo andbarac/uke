@@ -1,3 +1,54 @@
-Scanner in = new Scanner(System.in);
+Scanner scan = new Scanner(System.in);
+int i = scan.nextInt();
+String s = scan.nextLine();
+scan.close();
 
+##############################################################
 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+int N = Integer.parseInt(bufferedReader.readLine().trim());
+bufferedReader.close();
+
+##############################################################
+try
+{
+    long x=sc.nextLong();
+    System.out.println(x+" can be fitted in:");
+    if(x>=-128 && x<=127)System.out.println("* byte");
+    if(x>=-32768 && x<=32767)System.out.println("* short");
+    if(x>=-2147483648 && x<=2147483647)System.out.println("* int");
+    if(x>=-9223372036854775808L && x<=9223372036854775807L)System.out.println("* long");
+}
+catch(Exception e)
+{
+    System.out.println(sc.next()+" can't be fitted anywhere.");
+}
+##############################################################
+
+if (B<=0 || H <=0 ){
+    throw new RuntimeException("java.lang.Exception: Breadth and height must be positive");
+}
+##############################################################
+
+public static void main(String[] args) throws Exception {
+    if(flag){
+        int area=B*H;
+        System.out.print(area);
+    }
+
+        if (B<=0 || H <=0 ){
+            throw new Exception("java.lang.Exception: Breadth and height must be positive");
+
+        }
+##############################################################
+
+    static {
+        try {
+            if (B <= 0 || H <= 0) {
+                flag = false;
+                throw new Exception("Breadth and height must be positive");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+##############################################################
